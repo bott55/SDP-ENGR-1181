@@ -1,0 +1,1 @@
+player = zeros(4);

@@ -1,0 +1,25 @@
+clear
+clc
+
+gameBoard = zeros(10);
+%% Placing ships
+
+% Looping until 10 ships have been palced 
+     
+    orientations = [
+            
+    for i1 = 1:10        
+
+     shipCoordinates = getShipCoordinates();
+     shipSize = getShipSize(i1); 
+     seeIfShipCanBePlaced(shipCoordinates,shipSize,gameBoard);
+     
+     updateGameBoard(shipSize, shipCoordinates, gameBoard);
+    
+     disp(gameBoard);
+
+
+
+    end
+
+
