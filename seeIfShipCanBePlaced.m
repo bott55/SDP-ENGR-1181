@@ -7,10 +7,7 @@ function [canBePlaced] = seeIfShipCanBePlaced(shipCoordinates,size,gameBoard)
 %  seeIfShipCanBePlaced checks if the current ship being placed can be
 %  placed given the current coordinates
 
-%% Testing values
-gameBoard = zeros(10);
-shipCoordinates = [3 4];
-size = 2;
+
 
 canBePlaced = [ 0 0 0 0];
 
@@ -36,12 +33,8 @@ dynamicPoint =  shipCoordinates(end);
 staticPoint = shipCoordinates(1);
 
 if orientation1 == true
-    for i = 1:size
-        
-        
-        validOrientation =  gameBoard(staticPoint, dynamicPoint);
-        
-        
+    for i = 1:size        
+        validOrientation =  gameBoard(staticPoint, dynamicPoint);       
         dynamicPoint = dynamicPoint+1;
         if validOrientation == 1
             orientation1 = false;

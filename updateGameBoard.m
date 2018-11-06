@@ -7,29 +7,36 @@ function [gameBoard] = updateGameBoard(ship, shipCoordinates, orientation, gameB
 
 x = shipCoordinates(1);
 y = shipCoordinates(end);
-    
+
 
 if orientation == 1
-    
     for i = 1:ship
-        
         gameBoard(x,y) = 1;
-        
         x = x+1;
     end
-    
 end
 
 
+if orientation == 2
+    for i = 1:ship
+        gameBoard(x,y) = 1;
+        y = y+1;
+    end
+end
+
+if orientation == 3
+    for i = 1:ship
+        gameBoard(x,y) = 1;
+        x = x-1;
+    end
+end
 
 
-
-
-
-
-
-
-
-
+if orientation == 4
+    for i = 1:ship
+        gameBoard(x,y) = 1;
+        y = y-1;
+    end
+end
 end
 
